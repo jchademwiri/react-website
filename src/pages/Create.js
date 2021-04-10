@@ -14,7 +14,7 @@ const Create = () => {
 
 		setIsPending(true);
 
-		fetch('https://playhouse-media-tech.uc.r.appspot.com/api/posts', {
+		fetch('https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(blog),

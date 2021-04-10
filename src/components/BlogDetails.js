@@ -8,16 +8,15 @@ const BlogDetails = () => {
 
 	const { id } = useParams();
 	const { data: post, error, isPending } = useFetch(
-		'https://playhouse-media-tech.uc.r.appspot.com/api/posts/' + id
-		// http://localhost:8000/blogs/
+		'https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts/' + id
 	);
 	const history = useHistory();
 
 	const handleDelete = () => {
 		fetch(
-			'https://playhouse-media-tech.uc.r.appspot.com/api/posts/' + post._id,
+			'https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts/' +
+				post._id,
 			{
-				// http://demo.playhousemedia.net/db.json
 				method: 'DELETE',
 			}
 		).then(() => {
