@@ -8,13 +8,14 @@ import Blog from './pages/blog';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
 
 function App() {
 	return (
 		<Router>
 			<div className='App'>
 				<Navbar />
-				<div className='content'>
+				<div>
 					<Switch>
 						<Route exact path='/'>
 							<Home />
@@ -30,6 +31,9 @@ function App() {
 						</Route>
 						<Route path='/contact'>
 							<Contact />
+						</Route>
+						<Route path='/login'>
+							<Login />
 						</Route>
 						<Route path='/blog/:id'>
 							<BlogDetails />

@@ -6,7 +6,7 @@ const Blog = () => {
 		'https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts'
 	);
 	return (
-		<div className='blog'>
+		<div className='blog content'>
 			{error && <div>{error}</div>}
 			{isPending && <div>Loading data, please wait...</div>}
 			{posts && <BlogList posts={posts} title='All Blogs' />}
