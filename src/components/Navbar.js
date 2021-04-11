@@ -4,12 +4,14 @@ const Navbar = () => {
 	return (
 		<header>
 			<nav className='navbar'>
-				<h1>
-					<Link className='brand' to='/'>
-						Creative Web
-					</Link>
-					{/* Playhouse Blog */}
-				</h1>
+				<div>
+					<h1>
+						<Link className='brand' to='/'>
+							Creative Web
+						</Link>
+						{/* Playhouse Blog */}
+					</h1>
+				</div>
 				<div className='links'>
 					<Link to='/'>Home</Link>
 					<Link to='/blog'>Blog</Link>
