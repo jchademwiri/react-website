@@ -148,9 +148,6 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
 }
 
 .home {
@@ -159,7 +156,7 @@ body {
 }
 .home h1 {
 	font-size: 2.5em;
-	text-align-last: left;
+	text-align: left;
 }
 .home span {
 	color: var(--primary-color);
@@ -232,5 +229,33 @@ img {
 		display: flex;
 		justify-content: space-evenly;
 		margin: auto;
+	}
+	.icons {
+		display: none;
+	}
+
+	.home h1 {
+		font-size: 2em;
+	}
+	.home span {
+		color: var(--primary-color);
+	}
+	.typing-effect {
+		font-size: 1em;
+	}
+
+	.services {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.products {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
 	}
 }
