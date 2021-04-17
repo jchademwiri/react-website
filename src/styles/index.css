@@ -156,17 +156,19 @@ body {
 }
 
 .home {
+	/* margin-top: 10em; */
 	display: flex;
 	flex-direction: column;
 }
 .home h1 {
-	font-size: 2.5em;
+	font-size: 5em;
 	text-align: left;
 }
 .home span {
 	color: var(--primary-color);
 }
 .typing-effect {
+	margin-top: 2em;
 	display: flex;
 	font-size: 1.5em;
 }
@@ -223,6 +225,12 @@ img {
 }
 
 /* =================================  */
+@media only screen and (max-width: 900px) {
+	.home h1 {
+		font-size: 4em;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	nav {
 		flex-direction: column;
@@ -244,12 +252,13 @@ img {
 	}
 
 	.home h1 {
-		font-size: 2em;
+		font-size: 2.5em;
 	}
 	.home span {
 		color: var(--primary-color);
 	}
 	.typing-effect {
+		margin-top: 2em;
 		font-size: 1em;
 	}
 
