@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* @import background from '../images/background.png'; */
+/* Theme colors */
+:root {
+	--primary-color: #611097;
+	--secondary-color: #333;
+}
+
+/* base styles */
+* {
+	margin: 0;
+	font-family: 'Quicksand';
+	color: var(--secondary-color);
+}
+a {
+	text-decoration: none;
+}
+.active {
+	border-bottom: 3px solid var(--primary-color);
+	transition: border-bottom 0.5s ease-in-out;
+	/* color: red; */
+}
+
+body {
+	background-color: #ebe6ec;
+}
+
+.navbar {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	max-width: 900px;
+	margin: 0 auto;
+	border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1,
+.brand {
+	color: var(--primary-color);
+}
+.navbar .links {
+	margin-left: auto;
+}
+.navbar a {
+	margin-left: 16px;
+	text-decoration: none;
+	padding: 6px;
+}
+.navbar a:hover {
+	color: var(--primary-color);
+}
+.login-link {
+	color: white;
+	background-color: var(--primary-color);
+	border-radius: 8px;
+	margin: 5px 20px;
+}
+.navbar .login-link:hover {
+	color: white;
+}
+.content {
+	max-width: 900px;
+	/* width: 100%; */
+	margin: 40px auto;
+	padding: 20px;
+}
+
+/* blog previews / list */
+.blog-preview {
+	padding: 10px 16px;
+	margin: 20px 0;
+	border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-preview h2 {
+	font-size: 20px;
+	color: var(--primary-color);
+	margin-bottom: 8px;
+}
+.blog-preview a {
+	text-decoration: none;
+}
+
+/* blog details page */
+.blog-details h2 {
+	font-size: 20px;
+	color: var(--primary-color);
+	margin-bottom: 10px;
+}
+.blog-details div {
+	margin: 20px 0;
+}
+.blog-details button {
+	background: var(--primary-color);
+	color: #fff;
+	border: 0;
+	padding: 8px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+/* create new blog form */
+.create {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+.create label {
+	text-align: left;
+	display: block;
+}
+.create h2 {
+	font-size: 20px;
+	color: var(--primary-color);
+	margin-bottom: 30px;
+}
+.create input,
+.create textarea,
+.create select {
+	width: 100%;
+	padding: 6px 10px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	display: block;
+}
+.create button {
+	background: var(--primary-color);
+	color: #fff;
+	border: 0;
+	padding: 8px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.not-found,
+.footer {
+	text-align: center;
+}
+
+.date {
+	color: var(--primary-color);
+}
+
+/* HOME PAGE DESIGN  */
+.container {
+	/* width: 100vw; */
+	height: 90vh;
+	background-image: url('../images/background.png');
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+}
+.home h1 {
+	font-size: 2.5em;
+	text-align: left;
+}
+.home span {
+	color: var(--primary-color);
+}
+.typing-effect {
+	display: flex;
+	font-size: 1.5em;
+}
+div > .Typewriter__wrapper {
+	color: var(--primary-color);
+}
+img {
+	width: 100%;
+}
+
+.services h2,
+.start-project h3 {
+	padding: 30px 0;
+	text-align: center;
+}
+.products {
+	display: flex;
+	flex-grow: 1;
+}
+.products__product {
+	margin: 5px;
+}
+.products__product img {
+	border-radius: 5px;
+	/* width: 300px; */
+}
+.products__product a {
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+.icons {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	margin: 30px;
+	cursor: pointer;
+}
+.icon svg {
+	padding: 5px;
+	margin: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+#Icon_awesome-youtube:hover {
+	fill: #e62117;
+}
+#Icon_awesome-facebook-f:hover {
+	fill: #3b5998;
+}
+#Icon_awesome-linkedin-in:hover {
+	fill: #0072b1;
+}
+
+/* =================================  */
+@media only screen and (max-width: 600px) {
+	nav {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	.navbar a {
+		margin: auto;
+		padding: auto;
+	}
+	.links {
+		display: flex;
+		justify-content: space-evenly;
+		margin: auto;
+	}
+	.icons {
+		display: none;
+	}
+
+	.home h1 {
+		font-size: 2em;
+	}
+	.home span {
+		color: var(--primary-color);
+	}
+	.typing-effect {
+		font-size: 1em;
+	}
+
+	.services {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.products {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
