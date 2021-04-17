@@ -1,7 +1,7 @@
 import Typewriter from 'typewriter-effect';
 import Services from '../components/Services';
 import StartProject from '../components/StartProject';
-import SocialIcons from '../components/SocialIcons';
+// import SocialIcons from '../components/SocialIcons';
 
 const Home = () => {
 	return (
