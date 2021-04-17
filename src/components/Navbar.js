@@ -1,6 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+	const location = useLocation();
+
+	const { pathname } = location;
+
+	const splitLocation = pathname.split('/');
+
 	return (
 		<header>
 			<nav className='navbar'>
@@ -13,13 +19,34 @@ const Navbar = () => {
 					</h1>
 				</div>
 				<div className='links'>
-					<Link to='/'>Home</Link>
-					<Link to='/blog'>Blog</Link>
-					<Link to='/about'>About</Link>
-					<Link to='/Contact'>Contact</Link>
-					{/* <Link className='login-link' to='/login'>
-						Login
-					</Link> */}
+					<Link
+						exact='true'
+						className={splitLocation[1] === '' ? 'active' : ''}
+						to='/'
+					>
+						Home
+					</Link>
+					<Link
+						className={splitLocation[1] === 'blog' ? 'active' : ''}
+						to='/blog'
+					>
+						Blog
+					</Link>
+					<Link
+						className={splitLocation[1] === 'about' ? 'active' : ''}
+						to='/about'
+					>
+						About
+					</Link>
+					<Link
+						className={splitLocation[1] === 'contact' ? 'active' : ''}
+						to='/contact'
+					>
+						Contact
+					</Link>
+					<Link className='login-link' to='/Create'>
+						Create
+					</Link>
 				</div>
 			</nav>
 		</header>

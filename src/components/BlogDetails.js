@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { useHistory, useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
+import Loader from './Loader';
 
 const BlogDetails = () => {
 	const todayDate = new Date();
@@ -25,8 +26,8 @@ const BlogDetails = () => {
 	};
 
 	return (
-		<div className='blog-details'>
-			{isPending && <div>Loading...</div>}
+		<div className='blog-details content'>
+			{isPending && <Loader />}
 			{error && <div>{error}</div>}
 			{post && (
 				<article>

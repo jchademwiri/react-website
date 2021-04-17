@@ -1,4 +1,5 @@
 import BlogList from '../components/BlogList';
+import Loader from '../components/Loader';
 import useFetch from '../hooks/useFetch';
 
 const Blog = () => {
@@ -8,7 +9,7 @@ const Blog = () => {
 	return (
 		<div className='blog content'>
 			{error && <div>{error}</div>}
-			{isPending && <div>Loading data, please wait...</div>}
+			{isPending && <Loader />}
 			{posts && <BlogList posts={posts} title='All Blogs' />}
 		</div>
 	);

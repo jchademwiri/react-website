@@ -4,11 +4,11 @@ import Home from './pages/Home';
 import Create from './pages/Create';
 import About from './pages/About';
 import BlogDetails from './components/BlogDetails';
-import Blog from './pages/blog';
+import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 
 function App() {
 	return (
@@ -32,9 +32,9 @@ function App() {
 						<Route path='/contact'>
 							<Contact />
 						</Route>
-						<Route path='/login'>
+						{/* <Route path='/login'>
 							<Login />
-						</Route>
+						</Route> */}
 						<Route path='/blog/:id'>
 							<BlogDetails />
 						</Route>
