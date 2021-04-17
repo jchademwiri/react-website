@@ -26,7 +26,7 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-				<SocialIcons />
+				{/* <SocialIcons /> */}
 			</div>
 			<Services />
 			<StartProject />
