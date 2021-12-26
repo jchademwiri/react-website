@@ -8,17 +8,22 @@ const BlogDetails = () => {
 	// const postDate = moment(todayDate, 'DD-MM-YYYY').format('MM-DD-YYYY');
 
 	const { id } = useParams();
-	const { data: post, error, isPending } = useFetch(
-		'https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts/' + id
+	const {
+		data: post,
+		error,
+		isPending
+	} = useFetch(
+		'https://playhouse-blog.herokuapp.com/api/blog/posts/' + id
+		// 'http://localhost:8080/api/blog/posts/' + id
 	);
 	const history = useHistory();
 
 	const handleDelete = () => {
 		fetch(
-			'https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts/' +
-				post._id,
+			'https://playhouse-blog.herokuapp.com/api/blog/posts/' + post._id,
+			// 'http://localhost:8080/api/blog/posts/' + post._id,
 			{
-				method: 'DELETE',
+				method: 'DELETE'
 			}
 		).then(() => {
 			history.push('/blog');

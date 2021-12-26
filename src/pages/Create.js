@@ -14,10 +14,10 @@ const Create = () => {
 
 		setIsPending(true);
 
-		fetch('https://playhouse-media-tech.uc.r.appspot.com/api/blog/posts', {
+		fetch('https://playhouse-blog.herokuapp.com/api/blog/posts', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(blog),
+			body: JSON.stringify(blog)
 		}).then(() => {
 			console.log(`New blog added!`);
 			setIsPending(false);
@@ -40,8 +40,7 @@ const Create = () => {
 				<textarea
 					required
 					value={description}
-					onChange={(e) => setBody(e.target.value)}
-				></textarea>
+					onChange={(e) => setBody(e.target.value)}></textarea>
 				<label>Blog Autor:</label>
 				<select value={author} onChange={(e) => setAuthor(e.target.value)}>
 					<option value='Jacob Chademwiri'>Jacob Chademwiri</option>
